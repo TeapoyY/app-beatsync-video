@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "BeatSyncVideo",
+    "slug": "BeatSyncVideo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D0D0D"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.beatsyncvideo.app",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "BeatSyncVideo needs access to your photo library to pick videos and save edited videos.",
+        "NSPhotoLibraryAddUsageDescription": "BeatSyncVideo needs permission to save beat-synced videos to your gallery.",
+        "NSMicrophoneUsageDescription": "BeatSyncVideo needs microphone access to analyze audio for beat detection."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0D0D0D"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.beatsyncvideo.app",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_VIDEO",
+        "READ_MEDIA_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "BeatSyncVideo needs access to your photos to pick videos and save edited videos."
+        }
+      ],
+      "expo-av"
+    ]
+  }
+}
